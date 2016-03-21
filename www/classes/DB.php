@@ -10,8 +10,8 @@ class DB
 
     public function query($sql, $class = 'stdClass')
     {
-       $res = mysql_query($sql);
-        if ($res === false) {
+        $res = mysql_query($sql);
+        if (false === $res) {
             return false;
         }
         $ret = [];
